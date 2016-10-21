@@ -8,23 +8,31 @@
 
 public class TrainStation
 {
-    private MaquinaTicket machine1;
-    private MaquinaTicket machine2;
+    private MaquinaTicket maquina1;
+    private MaquinaTicket maquina2;
     private int dineroTotal;
 
   public TrainStation()
   {
-        machine1 = new MaquinaTicket(300);
-        machine2 = new MaquinaTicket(200);
-        dineroTotal = 0;
+       maquina1 = new MaquinaTicket(300);
+       maquina2 = new MaquinaTicket(200);
+       dineroTotal = 0;
   }
   
-  public void printdineroTotal()
-    {
-        dineroTotal = machine1.getTotal();
-        dineroTotal = dineroTotal + machine2.getTotal();
-    System.out.println(dineroTotal);
-    }
+  public void imprimirDineroTotal()
+  {
+       dineroTotal = maquina1.obtenerTotal();
+       dineroTotal = dineroTotal + maquina2.obtenerTotal();
+       System.out.println(dineroTotal);
+  }
+    
+  public void ventaBillete()
+  {
+       maquina1.insertarDinero(300);
+       maquina1.imprimirTicket();
+       maquina2.insertarDinero(200);
+       maquina2.imprimirTicket();
+  }
 }
 
 

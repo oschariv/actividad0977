@@ -76,7 +76,7 @@ public class MaquinaTicket
         balance = 0;
     }
 
-    public int getTotal()
+    public int obtenerTotal()
     {
        return total; 
     }
