@@ -80,5 +80,11 @@ public class MaquinaTicket
     {
        return total; 
     }
+    
+    
+    public void establecerPrecio(int coste)
+    {
+        precio= coste;
+    }
 
 }
