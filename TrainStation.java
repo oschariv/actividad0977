@@ -33,6 +33,7 @@ public class TrainStation
        maquina2.insertarDinero(200);
        maquina2.imprimirTicket();
   }
+  
 }
 
 
