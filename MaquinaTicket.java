@@ -19,9 +19,7 @@ public class MaquinaTicket
     private int total;
 
     /**
-     * Create a machine that issues tickets of the given precio.
-     * Note that the precio must be greater than zero, and there
-     * are no checks to ensure this.
+     * primer contructor sin parametro
      */
     public MaquinaTicket()
     {
@@ -30,6 +28,9 @@ public class MaquinaTicket
         total = 0;
     }
     
+    /**
+     * segundo contructor con parametro       
+       */
     public MaquinaTicket(int coste)
     {
         precio = coste;
@@ -83,23 +84,43 @@ public class MaquinaTicket
         balance = 0;
     }
 
+    /**
+     * devuelve el total de monedas introducidas hasta el momento en la maquina
+       */
     public int obtenerTotal()
     {
        return total; 
     }
     
+    /**
+     * establece un nuevo precio para el billete
+       */
     public void establecerPrecio(int coste)
     {
         precio= coste;
     }
     
+    /**
+     * muestra un error de que se introduzca el dinero correcto
+       */
     public void sugerencia()
     {
         System.out.println("Por favor, introduzca la cantidad de dinero correcta.");
     }
     
+    /**
+     * muestra el precio del ticket en el momento de ejecutarlo
+       */
     public void mostrarPrecio()
     {
         System.out.println("El precio de un ticket es de " + precio + " Euros");
+    }
+    
+    /**
+       Vaciador del total de monedas acumuladas en la maquina
+       */
+    public void vaciarMaquina()
+    {
+        total = 0;
     }
 }
