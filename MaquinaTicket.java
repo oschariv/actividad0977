@@ -81,10 +81,13 @@ public class MaquinaTicket
        return total; 
     }
     
-    
     public void establecerPrecio(int coste)
     {
         precio= coste;
     }
-
+    
+    public void sugerencia()
+    {
+        System.out.println("Por favor, introduzca la cantidad de dinero correcta.");
+    }
 }
